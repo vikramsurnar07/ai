@@ -1,0 +1,23 @@
+Practical No: 4A
+Title: Adversarial Search with Alpha-Beta Pruning
+
+Aim:
+To implement the Alpha-Beta Pruning algorithm for optimizing the Minimax search algorithm used in game-playing applications.
+
+Problem Statement:
+Given a balanced binary game tree of depth 3 with terminal leaf values [3, 5, 6, 9, 1, 2, 0, -1], determine the optimal minimax payoff for the root MAX player while using Alpha-Beta pruning to eliminate evaluations of branches that cannot influence the final decision.
+
+Objectives:
+- Understand adversarial search in two-player zero-sum deterministic games.
+- Study the Minimax algorithm with alternating MAX and MIN decision layers.
+- Implement Alpha-Beta pruning parameters to discard subtrees.
+- Reduce search complexity from O(b^d) down to O(b^(d/2)) in optimal scenarios.
+
+Parameters & Pruning Condition:
+- alpha: The highest value that MAX is guaranteed so far (initialized to -infinity).
+- beta: The lowest value that MIN is guaranteed so far (initialized to +infinity).
+- Pruning condition: If beta <= alpha, the parent node will never select this branch; prune remaining sibling children.
+
+Expected Output:
+Leaf node values: [3, 5, 6, 9, 1, 2, 0, -1]
+Optimal Value: 5

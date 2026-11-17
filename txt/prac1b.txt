@@ -1,0 +1,38 @@
+Practical No: 1B
+Title: BFS for Robot Path Planning Problem
+
+Aim:
+To implement Breadth First Search (BFS) to solve a robot path-planning problem and find the shortest path for a robot from a starting position to a goal position in a grid with obstacles.
+
+Problem Statement:
+Given a 2D grid of size R x C containing:
+- 'S': Starting cell
+- 'G': Goal cell
+- '.': Traversable free space
+- '#': Obstacle cell
+Implement BFS using a FIFO queue to find the shortest collision-free path from 'S' to 'G'. The robot can move in 4 cardinal directions (Up, Down, Left, Right) with uniform step cost.
+
+Objectives:
+- Understand uninformed search techniques applied to planning problems.
+- Study Breadth First Search (BFS) algorithm and FIFO queue management.
+- Guarantee shortest path discovery in unweighted state-space graphs.
+- Track visited coordinates to prevent cycles and reconstruct the path.
+
+Theory & Logic:
+1. Enqueue start position (0, 0), mark it visited, and set its parent to None.
+2. While queue is not empty:
+   a. Dequeue current position. If current == goal, terminate search.
+   b. For each adjacent direction (Right, Down, Left, Up):
+      - Compute neighbor coordinates.
+      - If within bounds, not an obstacle ('#'), and unvisited:
+        Mark visited, record parent pointer, and enqueue neighbor.
+3. Trace back parent pointers from goal to start and reverse to obtain shortest path.
+
+Complexity:
+- Time Complexity: O(R * C)
+- Space Complexity: O(R * C)
+
+Expected Output:
+Shortest Path Found with 8 steps.
+Path coordinates: (0, 0) -> (0, 1) -> (0, 2) -> (1, 2) -> (2, 2) -> (2, 3) -> (2, 4) -> (3, 4) -> (4, 4).
+Visual grid displaying '*' along the path.

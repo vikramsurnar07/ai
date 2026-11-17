@@ -1,0 +1,37 @@
+Practical No: 3B
+Title: Backtracking Search for 8-Queens Problem
+
+Aim:
+To implement the 8-Queens Problem using the Backtracking Search algorithm and find a valid arrangement of eight queens on a chessboard such that no two queens attack each other.
+
+Problem Statement:
+Place eight queens on an 8x8 standard chessboard such that no two queens can attack each other. A queen attacks another piece if both share the same row, column, or diagonal. Model and solve this Constraint Satisfaction Problem (CSP) using recursive backtracking.
+
+Objectives:
+- Understand Constraint Satisfaction Problems (CSPs) in Artificial Intelligence.
+- Implement the Backtracking search paradigm (Depth-First branch exploration with pruning).
+- Check constraints efficiently:
+  1. No queen in the same column.
+  2. No queen in the upper-left diagonal.
+  3. No queen in the upper-right diagonal.
+- Display the safe 8x8 chessboard arrangement.
+
+Theory & Logic:
+1. Place queens row by row starting at row 0.
+2. For each column in the current row:
+   a. Check if placing a queen at (row, col) is safe.
+   b. If safe, mark board[row][col] = 1 and recursively solve for row + 1.
+   c. If recursive call succeeds, return True.
+   d. Otherwise, backtrack: reset board[row][col] = 0 and try next column.
+3. If all 8 queens are placed (row == 8), a solution is found.
+
+Expected Output:
+Solution 8x8 matrix showing 1 for queen and 0 for empty square:
+[1, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 1, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 1]
+[0, 0, 0, 0, 0, 1, 0, 0]
+[0, 0, 1, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0]
+[0, 1, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 1, 0, 0, 0, 0]

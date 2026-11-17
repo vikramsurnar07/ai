@@ -1,0 +1,29 @@
+Practical No: 3A
+Title: A* Search Algorithm for 8-Puzzle Problem
+
+Aim:
+To implement the A* Search Algorithm for solving the 8-Puzzle Problem using heuristic search techniques.
+
+Problem Statement:
+The 8-puzzle consists of a 3x3 board containing 8 numbered tiles and an empty space (0). The objective is to transition from a given scrambled initial state to the target goal state:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 0]
+using minimum moves. Implement the A* search algorithm using Manhattan Distance as the admissible heuristic.
+
+Objectives:
+- Understand informed (heuristic) search strategies in AI.
+- Study the A* evaluation function f(n) = g(n) + h(n).
+- Implement Manhattan distance calculation for 2D tile configurations.
+- Use a min-priority queue (heapq) to prioritize optimal node exploration.
+
+Evaluation Function:
+f(n) = g(n) + h(n)
+- g(n): Path cost from start state to node n (number of moves made).
+- h(n): Heuristic estimate: Manhattan distance = sum of |x_curr - x_goal| + |y_curr - y_goal| for all tiles (excluding blank tile 0).
+
+Expected Output:
+Step-by-step 3x3 puzzle configurations leading from start to goal state:
+(1, 2, 3)     (1, 2, 3)     (1, 2, 3)
+(4, 0, 6) ->  (4, 5, 6) ->  (4, 5, 6)
+(7, 5, 8)     (7, 0, 8)     (7, 8, 0)

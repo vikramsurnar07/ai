@@ -1,0 +1,26 @@
+Practical No: 1A
+Title: Simple Reflex Agent for Vacuum Cleaner World
+
+Aim:
+To design and implement a Simple Reflex Agent for the Vacuum Cleaner World that cleans dirty rooms based on the current percept.
+
+Problem Statement:
+Implement a simple reflex agent for a two-room environment consisting of rooms 'A' and 'B'. The agent senses whether its current room is 'Clean' or 'Dirty'. If dirty, it cleans the room; if clean, it navigates to the adjacent room. The cycle terminates once all rooms in the environment are verified clean.
+
+Objectives:
+- Understand the core concepts and architecture of Intelligent Agents.
+- Implement Condition-Action rules (Percept -> Action mapping).
+- Simulate rational agent behavior in a fully observable environment.
+
+Theory & Logic:
+A Simple Reflex Agent selects actions based solely on the current percept, ignoring history:
+1. Initialize room status for 'A' and 'B' as 'Dirty', starting in Room 'A'.
+2. If the current room status is 'Dirty', perform action: Clean room.
+3. If the current room status is 'Clean', perform action: Move to the other room.
+4. Repeat until both Room 'A' and Room 'B' have status 'Clean'.
+
+Expected Output:
+Initial Room Status: {'A': 'Dirty', 'B': 'Dirty'}
+Agent cleans Room A, transitions to Room B, cleans Room B.
+Final Room Status: {'A': 'Clean', 'B': 'Clean'}
+All rooms are clean.

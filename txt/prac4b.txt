@@ -1,0 +1,33 @@
+Practical No: 4B
+Title: Rule-Based Chatbot with Pattern Matching
+
+Aim:
+To develop a simple chatbot using predefined rules and pattern matching techniques that can interact with users and provide appropriate responses.
+
+Problem Statement:
+Design and implement an interactive console chatbot that receives natural language strings from a user, normalizes the text (case-folding and trimming), evaluates matches against predefined conversational rules, and returns corresponding outputs. The session continues until the user inputs 'bye'.
+
+Objectives:
+- Understand foundational concepts of conversational AI agents.
+- Implement rule-based intent recognition and pattern matching.
+- Handle user input normalization to ensure robust matching.
+- Implement default fallback mechanisms for unrecognized inputs and graceful exit.
+
+Predefined Rules:
+- 'hello' / 'hi' -> 'Chatbot: Hello! How can I help you?'
+- 'how are you' -> 'Chatbot: I am fine. Thank you!'
+- 'what is your name' -> 'Chatbot: I am a simple AI Chatbot.'
+- 'who created you' -> 'Chatbot: I was created using Python programming.'
+- 'bye' -> 'Chatbot: Goodbye! Have a nice day.' (terminates conversation)
+- Any other query -> "Chatbot: Sorry, I don't understand that."
+
+Expected Interaction:
+Chatbot: Hello! Type 'bye' to exit.
+You: hello
+Chatbot: Hello! How can I help you?
+You: how are you
+Chatbot: I am fine. Thank you!
+You: what is your name
+Chatbot: I am a simple AI Chatbot.
+You: bye
+Chatbot: Goodbye! Have a nice day.

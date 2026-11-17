@@ -1,0 +1,28 @@
+Practical No: 2A
+Title: Model-Based Intelligent Agent for Grid Navigation
+
+Aim:
+To implement a model-based intelligent agent capable of navigating a grid environment containing obstacles by maintaining an internal state representation and finding dirty cells to clean.
+
+Problem Statement:
+Design and implement an intelligent agent with an internal state model navigating an N x M grid. The environment contains:
+- 'D': Dirty cells requiring cleaning
+- 'C': Clean cells
+- 'X': Impassable obstacles
+The agent must keep an internal memory (visited cells and sensed obstacle locations) to avoid redundant movements, safely bypass obstacles, and clean all accessible dirty cells.
+
+Objectives:
+- Learn the structure of a Model-Based Reflex Agent with internal memory.
+- Maintain an accurate internal representation of partially observable worlds.
+- Navigate a 2D grid using queue-based exploration while dynamically logging obstacles.
+- Clean dirty cells upon arrival and update the environment state.
+
+Theory & Logic:
+Unlike simple reflex agents, a model-based agent maintains:
+1. `visited`: Matrix storing visited coordinates to avoid looping.
+2. `obstacles`: Set storing coordinates discovered to contain 'X'.
+The agent expands reachable neighbors in 4 directions. If an obstacle is encountered, it is logged into the agent's internal model. If a dirty cell 'D' is encountered, the agent cleans it to 'C'.
+
+Expected Output:
+Step-by-step movements and cleaning logs across the grid.
+Final grid showing cleaned cells and identified obstacle set: {(0, 2), (1, 3), (2, 1)}.
